@@ -26,3 +26,17 @@ function setTheme() {
     document.documentElement.setAttribute("data-theme", "white");
   }
 }
+function MouseMove(event) {
+  const divMouseMove = document.querySelector(".followMouse");
+
+  let rectX = event.clientX;
+  let rectY = event.clientY;
+
+  let leftX = rectX - 22;
+  let topY = rectY - 20;
+
+  divMouseMove.style.left = leftX + "px";
+  divMouseMove.style.top = topY + "px";
+}
+
+document.addEventListener("mousemove", (event) => MouseMove(event));
