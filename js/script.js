@@ -34,9 +34,10 @@ function MouseMove(event) {
 
   let leftX = rectX - 22;
   let topY = rectY - 20;
-
-  divMouseMove.style.left = leftX + "px";
-  divMouseMove.style.top = topY + "px";
+  setTimeout(() => {
+    divMouseMove.style.left = leftX + "px";
+    divMouseMove.style.top = topY + "px";
+  }, 100);
 }
 
 document.addEventListener("mousemove", (event) => MouseMove(event));
